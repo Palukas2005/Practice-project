@@ -13,22 +13,18 @@ int main(){
     printf("Devinez le nombre entre %d et %d.\n", min, max);
     
     do{
-        printf ("Votre proposition espèce d'enculé ! : ");
+        printf ("Votre proposition espece d'encule ! : ");
         scanf ("%d", &nombreJoueur);
         essais++;
-        if (nombreJoueur < min || nombreJoueur > max)
-        {
-            printf("Hé oh ! Reste dans les limites du jeu entre %d et %d espèce de bouffon !\n", min, max);
-            continue;
-        }
-        else if(nombreJoueur < nombreMystère){
+        
+        if(nombreJoueur < nombreMystère){
             printf("Le nombre est plus grand petit merdeux !\n");
         }
         else if (nombreJoueur > nombreMystère){
             printf("C'est plus petit BORDEL !!\n");
         }
         else{
-            printf("Bien joué boufon tu as ruiné quelques secondes de ta vie pour trouvé un putain de nombre en %d essais.\n", essais);
+            printf("Bien joué boufon tu as ruine quelques secondes de ta vie pour trouve un putain de nombre en %d essais.\n", essais);
         } 
         
     }while(nombreJoueur != nombreMystère);

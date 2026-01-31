@@ -4,22 +4,32 @@ const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 // Tête du sprite
-ctx.fillStyle = "blue";
-ctx.fillRect(15, 0, 20, 20);
+ctx.fillStyle = "#f2c9ac";
+ctx.fillRect(16, 2, 18, 16);
 
-// Corps du sprite
+//Yeux du srpite
+ctx.fillStyle = "#000";
+ctx.fillRect(20, 7, 3, 3); //oeil gauche
+ctx.fillRect(27, 7, 3, 3);//oeil droit
+
+// Torse du sprite
+ctx.fillStyle = "#3b82f6";
+ctx.fillRect(18, 18, 14, 14);
+
+// Bras du sprite
 ctx.fillStyle = "red";
-ctx.fillRect(15, 20, 20, 20);
+ctx.fillRect(12, 18, 6, 14); //bras gauche
+ctx.fillRect(32, 18, 6, 14); //bras droit
 
 // Jambes du sprite
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 40, 8, 10); // jambe gauche
-ctx.fillRect(32, 40, 8, 10); // jambe droite
+ctx.fillStyle = "#1f2936";
+ctx.fillRect(18, 32, 6, 12); // jambe gauche
+ctx.fillRect(26, 32, 6, 12); // jambe droite
 
 // Créer le lien pour télécharger le sprite
-const dataURL = canvas.toDataURL("image/png"); // ✅ Méthode correcte
+const dataURL = canvas.toDataURL("image/png"); //  Méthode correcte
 const link = document.createElement("a");
-link.download = "monPremierSprite.png";
+link.download = "monPremierSprite_humanoïde.png";
 link.href = dataURL;
 link.textContent = "Télécharger le sprite";
 

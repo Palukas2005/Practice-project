@@ -16,10 +16,8 @@ int main(){
         printf ("Votre proposition espèce d'enculé ! : ");
         scanf ("%d", &nombreJoueur);
         essais++;
-        if (nombreJoueur < min || nombreJoueur > max)
-        {
-            printf("Hé oh ! Reste dans les limites du jeu entre %d et %d espèce de bouffon !\n", min, max);
-            continue;
+        if (nombreJoueur < 1 || nombreJoueur > 100){
+            printf("Hey oh ! Reste dans les limites du jeu entre %d et %d espece de bouffon !\n", min, max);
         }
         else if(nombreJoueur < nombreMystère){
             printf("Le nombre est plus grand petit merdeux !\n");

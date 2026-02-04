@@ -2,8 +2,8 @@ const player = document.getElementById("player");
 const gameArea = document.getElementById("game-area");
 
 let playerPos = {
-    x: (gameArea.clientWidth - 50)/2,
-    y: (gameArea.clientHeight - 50)/2
+    x: (gameArea.clientWidth - 75)/2,
+    y: (gameArea.clientHeight - 75)/2
 }; // position initiale
 const speed = 5; // vitesse en pixels
 
@@ -38,9 +38,9 @@ function movePlayer(timestamp) {
     const distance = (speed * delta) / 16; // ajuste la distance selon le temps
 
     if (keys.ArrowUp) playerPos.y = Math.max(0, playerPos.y - distance);
-    if (keys.ArrowDown) playerPos.y = Math.min(gameArea.clientHeight - 50, playerPos.y + distance);
+    if (keys.ArrowDown) playerPos.y = Math.min(gameArea.clientHeight - 65, playerPos.y + distance);
     if (keys.ArrowLeft) playerPos.x = Math.max(0, playerPos.x - distance);
-    if (keys.ArrowRight) playerPos.x = Math.min(gameArea.clientWidth - 50, playerPos.x + distance);
+    if (keys.ArrowRight) playerPos.x = Math.min(gameArea.clientWidth - 65, playerPos.x + distance);
 
     // Mettre à jour la position du joueur
     player.style.top = playerPos.y + "px";
